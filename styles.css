@@ -1,0 +1,76 @@
+@font-face {
+    font-family: 'Distrela Extra Light';
+    src: url('https://files.jcink.net/uploads2/leaptesting/Ekahermawan___Distrela_Extra_Light.otf'); }
+    @font-face {
+    font-family: 'Distrela Light';
+    src: url('https://files.jcink.net/uploads2/leaptesting/Ekahermawan___Distrela_Light.otf'); }
+    @font-face {
+    font-family: 'Distrela';
+    src: url('https://files.jcink.net/uploads2/leaptesting/Ekahermawan___Distrela_Regular.otf'); }
+    @font-face {
+    font-family: 'Distrela Semibold';
+    src: url('https://files.jcink.net/uploads2/leaptesting/Ekahermawan___Distrela_Semi_Bold.otf'); }
+    @font-face {
+    font-family: 'Distrela Bold';
+    src: url('https://files.jcink.net/uploads2/leaptesting/Ekahermawan___Distrela_Bold.otf'); }
+    @font-face {
+    font-family: 'Distrela Extra Bold';
+    src: url('https://files.jcink.net/uploads2/leaptesting/Ekahermawan___Distrela_Extra_Bold.otf'); }
+    
+*{
+    padding:0;
+    margin:0;
+}
+body { margin: 0; position: relative;background-color: black;overflow-x: hidden; }
+canvas { display: block; z-index:4;}
+.char {
+    position: absolute;
+    transition: transform 0.2s ease; /* Optional: smooth transition for rotation */
+    animation: float 3s ease-in-out infinite; /* Apply the floating animation */
+    z-index: -1;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px); /* Move up */
+    }
+    100% {
+        transform: translateY(0); /* Move back down */
+    }
+}
+
+.section1{
+    color:white;
+    height: 100vh;
+    width:100vw;
+}
+.section2 {
+    color: transparent; /* Makes the fill transparent */
+    -webkit-text-stroke: 2px white; /* Defines the stroke width and color */
+    font-family: "Distrela";
+    font-size: 60px;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+.name{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    z-index: -4;
+    font-size: 12rem;
+    font-family: "Distrela";
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.513);
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.476); 
+}
+.name:hover{
+    color: white;
+}
